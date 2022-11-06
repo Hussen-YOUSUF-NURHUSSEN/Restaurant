@@ -1,0 +1,179 @@
+
+
+
+/*
+    !! HTML && CSS  ========> How to think about the project ?
+
+
+    @-- 1- Idea Mapping  
+
+    --- listen to the clients and gather as much information (requirements) from them as possible.
+
+    based on the information I do research. Look at some web designs on (Pinterest) and (Behance)
+
+    Then I make rough sketch (wireframe) of the web page on paper with pen or pencil.
+    And then design it (UI) using softwares like Photoshop or Sketch.
+
+
+    @-- 2. Structuring 
+
+    --- divide the conceptual web page design into different sections.
+
+    Then, Add HTML elements on each sections based on their requirements.
+
+
+    @-- 3. Styling 
+
+    ---- using CSS
+
+    ++ for ( icons ) icons8.com
+
+        ex :- https://img.icons8.com/fluent/50/000000/facebook-new.png"
+
+*/
+
+/* ++ ----------------------------------------------------------------------------------- */
+
+
+/* 
+    !! Explain the structure of the project
+
+    @-- admin
+        
+        ++ add/
+            To add (admin) or (category) or (food)
+        
+        ++ delete/
+            To delete (admin) or (category) or (food)
+        
+        ++ func/
+            contain (helpers.php) to help with functions like :- 
+                - sessionSet_unset() 
+                - validateAdmin() 
+                - validatePassword() 
+                - validatefood()
+                - validateOrder() 
+                - upload_img_ORredirecT() 
+                - query_session_redirect() 
+                - session_redirect()
+        
+        ++ homepage/
+            The main page (index.php) and (login.php) and (logout.php)
+        
+        ++ manage/
+            Main page to manage (admin) and (category) and (food) and (order)
+        
+        ++ partials/
+            contain (footer.php) and (menu.php)
+        
+        ++ update/
+            contain (footer.php) and (menu.php)
+        
+
+    @--config/
+
+        contain (constants.php) =====> start session & database connection
+        
+    @--css/
+
+        contain (admin.php) =====> style for back-end project/admin
+
+        contain (style.php) =====> style for front-end project/
+        
+    @--images/
+
+        contain 2 folder (category) & (food) =====> for project/admin
+
+        and contains general images for all the project
+        
+    @--partials-front/
+
+        contain (footer.php) and (menu.php) for the front-end
+    
+    @-- front-end pages :- 
+
+    --- index.php
+    --- order.php
+    --- foods.php
+    
+*/
+
+/* ++ ----------------------------------------------------------------------------------- */
+
+
+
+/* 
+
+    --- I used -------> Better Comments  by Aaron Bond
+
+The configuration in settings json are :- 
+
+"better-comments.tags": [
+    
+        {
+            "tag": "!!",        // important
+            "color": "#FF2D00", // red
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "@--",      // main
+            "color": "#0f0f0f", // black
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "#797c7d",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": "---",       // explain important
+            "color": "#1e9c5a",  // green
+            },
+        {
+            "tag": "todo",       // to do
+            "color": "#FF8C00",  // orange
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "++",       // html
+            "color": "#3498DB",  // blue
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "*#",          // 
+            "color": "#ccd63a",   // yellow
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        }
+]
+*/
+
+/* ++ ----------------------------------------------------------------------------------- */
+
+
+
+/* 
+    ~~ Improvements to do 
+
+    @-- 
+
+*/
+
+
+
+/* ################################################################# */
+

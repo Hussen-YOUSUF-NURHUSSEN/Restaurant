@@ -1,0 +1,503 @@
+
+/* 
+    ################ For php files in ---> project/  ################ 
+*/
+
+/* --- Start ===> General */
+
+:root {
+    --main-color : #f1a537;
+    --black: #040404b8;
+    --white: #fffdfb;
+    --blue: #47b4d1;
+
+    --transition : 0.3s; 
+}
+* { 
+    margin : 0 0;
+    padding: 0 0;
+    font-family: cursive, Helvetica, sans-serif;
+} 
+.container {
+    width  : 80%;
+    margin : 0 auto;
+    padding: 1%;
+}
+a {
+    text-decoration: none;
+    transition: var(--transition);
+    color: var(--main-color);
+}
+a:hover {
+    color: var(--black);
+}
+
+/* -- ------------------------------------------------ */
+
+
+/* Big head in the middle of each page */
+.main-head {
+    /* Color */
+    color: var(--black);
+    /* Dimenstion */
+    font-weight: 500;
+    font-size: 2rem;
+    text-align: center;
+    /* Margin */
+    margin-top: 50px;
+    margin-bottom: 63px; 
+}
+/* Flash message eg. order successfuly */
+.flash {
+    width: 100%;
+    padding: 6px;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+}
+.flash-error {
+    border-radius: 10px;
+    background-color: #a52a2ad1;
+}
+.flash-success {
+    background-color: #347236e0
+}
+/* -- ------------------------------------------------ */
+
+/* Whether it is anchor || input[submit] */
+.main-button {
+    color: var(--white);
+    background-color: var(--main-color);
+    border: none;
+}
+.main-button:hover {
+    background-color: #04040499;
+    color: var(--main-color);
+}
+/* --- END ===> General */
+
+/* @-- --------------------------------------------------------------- */
+
+
+/* --- Start ===> navbar */
+
+
+/* Hold both (icon image on left) & (menu anchors on right) */
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+} 
+/* (icon image on left) */
+.navbar .container .logo img {
+    width: 83px;
+    border-radius: 50%;
+}
+/* ( menu on right ---> to be in center vertically )  */
+.navbar .container .menu {
+    display: flex;
+}
+/* -- ------------------------------------------------ */
+
+.navbar .container .menu ul {
+    display: flex;
+    align-items: center;
+}
+.navbar .container ul li {
+    list-style: none;
+    padding-left: 23px;
+}
+/* -- ------------------------------------------------ */
+
+.navbar .container ul li a {
+    font-size: 19px;
+}
+.navbar .container ul li a:hover {
+    color: var(--black);
+}
+/* From 0px --> 530px */
+@media only screen and (max-width:530px) {
+
+    .navbar .container ul li a {
+        font-size: 16px;
+    }
+    .navbar .container .menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+    }
+}
+
+/* --- END ===> navbar */
+
+
+/* @-- --------------------------------------------------------------- */
+
+
+/* --- Start ===> food-search */
+
+/* A (section) that contain a (div) that encompass a (form) */
+.food-search {
+    height: 227px;
+}
+/* the same section ---> give it a background-img */
+.back-img-shadow {
+    background-image: url(../images/food_background.jpg);
+    background-size: cover;
+    background-position: 0px;
+    position: relative;
+}
+.back-img-shadow::before {
+    content: "";
+    position: absolute;
+    background-color: #0000008a;
+    width: 100%;
+    height: 100%;
+}
+
+/* -- ------------------------------------------------ */
+
+/* Center the div that contain the form */
+.food-search div {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 100%;
+    /* For the form */
+    text-align: center;  
+    background-color: #87807d69;
+}
+.food-search form input {
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+}
+/* For search */
+.food-search form input:first-of-type {
+    width: 35%;
+    height: 39px;
+    /* for placeholder */
+    padding-left: 12px;
+    outline: none;
+}
+/* -- ------------------------------------------------ */
+
+/* Button  ----------------- */
+.food-search form input:last-of-type{
+    padding: 11px 12px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+/* -- ----------------------- */
+
+@media only screen and (max-width:530px) {
+
+    /* One after another */
+    .food-search form input {
+        display: block;
+    }
+    .food-search form input:first-of-type {
+        width: 98%;
+        margin: 0px 0px  13px 5px;
+    }
+    .food-search form input:last-of-type {
+        margin-left: 43%;
+    }
+}
+
+/* --- END ===> food-search */
+
+/* @-- --------------------------------------------------------------- */
+
+
+/* --- Start ===> categories*/
+
+/* Categories will be encapsulated inside anchors */
+
+.categories .container a {
+    display: inline-block; 
+    width: 300px;
+    padding-left: 26px;
+}
+
+.categories .container a .category_img_space {
+    width: 287px;
+    height: 345px;
+    border: 1px solid var(--main-color);
+    border-radius: 15px;
+}
+/* Text in bottom of img */
+.categories .container a div h3 {
+    position: relative;
+    bottom: 42px;
+    width: 289px;
+    text-align: center;
+    color: #f6f8ff;
+    background-color: #000000e3;
+    border-radius: 16px;   
+    padding: 5px 0;
+    font-weight: 500;
+}
+@media only screen and (max-width:1230px) {
+
+    /* Center the whole section */
+    .categories {
+        text-align: center;
+    }
+    /* Take all width, instead of 80% */
+    .categories .container {
+        width: auto;
+    }
+    /* To center the background title on top of image  */
+    .categories .container a {
+        width: auto;
+    }
+    .categories .container a .category_img_space  {  
+        width: 250px;
+        height: 250px;
+    }
+    /* title on top of image */
+    .categories .container a div h3 {
+        width: 252px;
+    }
+}
+
+/* categories.php  */
+
+/* Because there is no other style */
+.categories-page {
+    background-color: #edededbf;
+}
+
+/* --- END ===> categories */
+
+
+/* @-- --------------------------------------------------------------- */
+
+
+/* --- Start ===> food-menu */
+
+.food-menu {
+    background-image: url(../images/order.jpg);
+    background-size: cover;
+}
+.food-menu .container {
+    background-color: #a9a9a973;
+    margin-bottom: 12px;
+}
+/* Hold the food boxes */
+.food-menu .container .parent {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+/* Contains img & description */
+.food-menu .container .parent .food-menu-box { 
+    display: flex;
+    width: 41%;
+    background-color: var(--white);
+    margin-bottom: 15px;
+    padding: 24px;
+    border-radius: 10px;   
+    /* To center the "order now" button */
+    position: relative;
+}
+.food-menu .container .food-menu-box .food-menu-img img {
+    width: 95px;
+    height: 95px;
+    border: 1px solid var(--main-color);
+    border-radius: 8px;
+}
+
+/* -- ------------------------------------------------ */
+
+/* Vertical espace between descriptions */
+.food-menu .container .food-menu-box .food-menu-desc {
+    margin-left: 11px;
+    line-height: 1.7;
+}
+.food-menu .container .food-menu-box .food-menu-desc h4 {
+    color: var(--blue);
+}
+.food-menu .container .food-menu-box .food-menu-desc p:last-of-type {
+    color: #565655d4;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+/* Button */
+.food-menu .container .food-menu-box .food-menu-desc a {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* -- ------------------------------------------------ */
+
+/* To see more, at bottom of page ---> "See All Foods" button */
+.food-menu > p {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+.food-menu > p a {
+    background-color: #463434;
+    font-size: 1.2rem;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* -- ------------------------------------------------ */
+
+@media only screen and (max-width:780px) {
+
+    /* For div's, instead of space-between */
+    .food-menu .container .parent {
+        justify-content: center;
+    }
+    .food-menu .container .parent .food-menu-box {
+        width: 80%;
+    }
+} 
+
+/* --- END ===> food-menu */
+
+
+/* @-- --------------------------------------------------------------- */
+
+
+/* --- Start ===> social in footer.php  */
+
+/* Social media links */
+
+.social-icons {
+    margin-top: 40px;
+}
+.social-icons ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.social-icons ul li:not(:last-child) {
+    padding-right: 22px;
+}
+
+/* --- END ===> social */
+
+
+/* @-- --------------------------------------------------------------- */
+
+
+/* --- Start ===> footer */
+
+.footer {
+    margin: 10px auto;
+}
+.footer p {
+    text-align: center;
+}
+
+/* --- END ===> footer */
+
+/* @-- --------------------------------------------------------------- */
+
+
+/* !! order.html */
+
+
+/* --- Start Order ===> */
+
+#order_back_photo {
+    background-image: url(../images/order.jpg);
+}
+.order-section > div {
+    /* ++ to be on top of background dark layer */
+    position: relative;
+}
+/* Center it */
+.order-section fieldset {
+    width: 50%;
+    margin: 35px auto;
+    padding: 30px; 
+}
+
+/* GENERAL FOR BOTH FIELDSET ------------------------------------------------------ */
+
+.order-section fieldset legend {
+    color: var(--main-color);
+}
+.order-section .common-back {
+    background-color: #e2dfe778; 
+    border-radius: 5px;
+    padding: 17px;
+}
+/* Same size for input & textarea */
+.order-section input,
+.order-section textarea {
+    width: 100%;
+    outline: none;
+    /* Inside text */
+    padding-left: 5px;
+}
+/* -- ---------------------------------------------------- */
+
+/* 1) First fieldset */
+
+.order-section fieldset .food-menu-box {
+    display: flex;
+}
+.order-section fieldset .food-menu-box .food-menu-img  {
+    margin-right: 20px;
+}
+.order-section fieldset .food-menu-box .food-menu-img img {
+    width: 100px;
+    height: 100px;
+    border: 1px solid var(--main-color);
+    border-radius: 7px;
+}
+.order-section fieldset .food-menu-box .food-menu-desc {
+    line-height: 1.7;
+    margin-top: -6px;
+}
+/* -- ---------------------------------------------------- */
+
+/* 2) Second fieldset */
+
+/* The input text label */
+.order-section fieldset:last-child p {
+    margin-bottom: 5px;
+}
+/* inputs except submit & textarea */
+.order-section fieldset:last-child input:not(:last-child),
+.order-section fieldset:last-child textarea {
+    margin-bottom: 20px;
+}
+
+/* Submit button */
+.order-section fieldset:last-child input:last-child {
+    width: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+/* -- ---------------------------------------------------- */
+
+@media only screen and (max-width:450px) {
+
+    .order-section fieldset {
+        width: auto;
+    }
+    .flash {
+        width: auto;
+    }
+} 
+/* --- END Order ===>  */
+
+
+/* @-- --------------------------------------------------------------- */
+
+
